@@ -1,0 +1,66 @@
+Actúa como un Desarrollador Senior Frontend y Diseñador UI experto en React, Tailwind CSS y Animaciones.
+
+**OBJETIVO DEL PROYECTO:**
+Crear una Landing Page de alto impacto para la campaña de Carnaval de la empresa de seguridad "COGAROL". El flujo es: el usuario escanea un QR, ve la publicidad/imágenes de la empresa (branding) y luego baja para llenar un formulario de sorteo.
+
+**ARCHIVOS ADJUNTOS:**
+He subido 3 imágenes reales (`cogarol 1`, `2`, `3`). Úsalas OBLIGATORIAMENTE en la sección Hero/Publicidad. No uses placeholders grises.
+
+---
+
+### 1. SISTEMA DE DISEÑO (ESTRICTO)
+No inventes estilos. Sigue estas reglas basadas en la identidad corporativa "Premium":
+
+* **Tipografía (IMPORTANTE):**
+    * Debes importar y usar `Poppins` (Pesos 600/700) para Títulos.
+    * Debes importar y usar `Nunito` (Pesos 400/600) para Textos y Labels.
+    * **Tamaño:** El texto base debe ser grande y legible (`text-lg` o 18px mínimo). Los títulos deben ser masivos.
+* **Paleta de Colores:**
+    * Dominante: Blanco (#FFFFFF) y Gris Perla (#F8F9FA) para fondos.
+    * Primario (Texto/Brand): Azul Navy Profundo (**#191548**).
+    * Acento (Bordes/Detalles): Dorado Metálico (**#D4AF37**).
+    * Botones: Gradiente de Dorado a Bronce.
+* **Estética:** Diseño limpio, corporativo pero festivo. Usa sombras suaves (`shadow-xl`) y bordes redondeados (`rounded-2xl`). **EVITA EL MODO OSCURO.**
+
+---
+
+### 2. ESTRUCTURA DE LA PÁGINA (Orden Secuencial)
+
+**A) HERO SECTION (PUBLICIDAD E IMPACTO)**
+* **Ubicación:** Parte superior (100% viewport height o casi).
+* **Fondo:** Blanco con detalles geométricos diagonales en las esquinas (SVG) en color Azul Navy y Dorado (inspirado en un certificado de seguridad).
+* **Contenido:**
+    * **Izquierda:** Título H1 impactante en *Poppins*: "Seguridad que se siente, Carnaval que se disfruta". Subtítulo en *Nunito*: "Más de 20 años protegiendo lo que más valoras. Participa y gana con Cogarol."
+    * **Derecha:** Un componente visual atractivo (Carousel o Grid tipo Collage) que muestre las 3 imágenes subidas. Dales marcos finos dorados.
+
+**B) SECCIÓN DE REGISTRO (EL FORMULARIO)**
+* **Ubicación:** Debajo del Hero.
+* **Fondo de Sección:** Para diferenciarlo, usa un fondo **Gris Azulado muy suave** (`bg-slate-100`) o un patrón sutil. Esto hará que la tarjeta del formulario resalte.
+* **Tarjeta del Formulario:**
+    * Debe ser una "Card" blanca flotante, centrada.
+    * Sombra muy pronunciada (`shadow-2xl`).
+    * Borde superior grueso en color Dorado (#D4AF37).
+* **Campos (React Hook Form + Zod):**
+    * *Estilo:* Inputs grandes, con borde gris suave que cambia a azul al enfocar. Texto interno grande.
+    * 1. Nombre Completo.
+    * 2. Cédula (Validación estricta: debe tener **exactamente 10 dígitos numéricos**).
+    * 3. Fecha (Input date).
+    * 4. Teléfono.
+    * 5. Número de Entrada (Destacado, quizás con un icono de ticket).
+* **Botón de Acción (CTA):**
+    * NO hagas un botón simple.
+    * Diseño: Gradiente Dorado (#D4AF37) a Bronce. Texto en Azul Navy (Negrita).
+    * Animación: Al hacer Hover, debe crecer (`scale-105`) y aumentar el brillo.
+    * Texto: "CANJEAR OPORTUNIDAD".
+
+**C) FOOTER**
+* Fondo Azul Navy (#191548). Texto Blanco. Copyright 2026.
+
+---
+
+### 3. REQUERIMIENTOS TÉCNICOS
+* **Stack:** React + Vite + Tailwind CSS + Lucide React (Iconos).
+* **Backend:** Supabase. Crea el cliente para insertar en la tabla `participantes_carnaval`.
+* **Feedback:** Al enviar el formulario exitosamente, muestra una animación de celebración (confeti) y un mensaje de "Registro Exitoso".
+
+Ejecuta la creación del entorno, la instalación de dependencias y el código de los componentes asegurando que la tipografía y los colores sean exactos a lo solicitado.
