@@ -106,9 +106,6 @@ export default function LandingPage() {
                   PARTICIPAR AHORA
                 </GoldButton>
               </a>
-              <button className="px-8 py-4 rounded-xl font-bold text-[#191548] bg-white border-2 border-slate-200 hover:border-[#191548] transition-all">
-                Conocer Más
-              </button>
             </div>
           </motion.div>
 
